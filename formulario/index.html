@@ -4,60 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Registro de Usuario</h1>
     <form action="/registro" method="post">
-        <label for="nombre" > Nombre completo: </label>
-        <input type="text" id="nombre" placeholder="Escribe tu nombre aqui " title="Tu nombre debe ir aqui"  required><br><br>
+        <h1>Registro de Usuario</h1>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre aquí" title="Tu nombre debe ir aquí" required>
 
         <label for="correo">Correo:</label>
-        <input type="email" id="correo" placeholder="Escribe tu correo aqui" title="Tu correo debe ir aqui" required ><br><br>
+        <input type="email" id="correo" placeholder="Escribe tu correo aquí" title="Tu correo debe ir aquí" required>
+
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password"
-        pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,12}$"
-        title="Debe tener entre 8 y 12 caracteres, al menos una mayúscula, un número y un símbolo."
-        required placeholder="Escribe tu contraseña"><br><br>
+            pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,12}$"
+            title="Debe tener entre 8 y 12 caracteres, al menos una mayúscula, un número y un símbolo."
+            required placeholder="Escribe tu contraseña">
 
-        <label for="Genero">Genero</label>
-        <label for="masculino">M</label>
-        <input type="radio" id="masculino" name="genero" value="masculino">
-        <label for="femenimo">F</label>
-        <input type="radio" id="femenino" name="genero" value="femenino"><br><br>
+        <label>Género:</label>
+        <div class="radio-group">
+            <label for="masculino">M</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="femenino">F</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+        </div>
 
-    
-        <label>Intereses:</label><br>
-        <input type="checkbox" name="intereses" value="musica"> Música<br>
-        <input type="checkbox" name="intereses" value="deporte"> Deporte<br>
-        <input type="checkbox" name="intereses" value="lectura"> Lectura<br>
-        <input type="checkbox" name="intereses" value="viajes"> Viajes<br><br>
+        <label>Intereses:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="intereses" value="musica"> Música</label>
+            <label><input type="checkbox" name="intereses" value="deporte"> Deporte</label>
+            <label><input type="checkbox" name="intereses" value="lectura"> Lectura</label>
+            <label><input type="checkbox" name="intereses" value="viajes"> Viajes</label>
+        </div>
 
         <label for="pais">País:</label>
         <select name="pais" id="pais" required>
-        <option value="">Seleccione un país</option>
-        <option value="argentina">Argentina</option>
-        <option value="brasil">Brasil</option>
-        <option value="chile">Chile</option>
-        <option value="colombia">Colombia</option>
-        <option value="ecuador">Ecuador</option>
-        <option value="españa">España</option>
-        <option value="mexico">México</option>
-        <option value="peru">Perú</option>
-        <option value="uruguay">Uruguay</option>
-        <option value="venezuela">Venezuela</option>
-        </select><br><br>
+            <option value="">Seleccione un país</option>
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <option value="chile">Chile</option>
+            <option value="colombia">Colombia</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="españa">España</option>
+            <option value="mexico">México</option>
+            <option value="peru">Perú</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="venezuela">Venezuela</option>
+        </select>
 
-        <label for="comentario">Comentario</label><br><br>
-        <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escriba aqui su comentario" title="aqui va su comentario" minlength="50" required> </textarea> <br><br>
-
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" placeholder="Escriba aquí su comentario"
+            title="Aquí va su comentario" minlength="50" required></textarea>
 
         <button type="submit">Enviar</button>
-
- 
-
     </form>
-
-    
-    
 </body>
 </html>

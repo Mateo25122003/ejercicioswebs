@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form action="/registro" method="post">
+        <label for="nombre" > Nombre completo: </label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre aqui " title="Tu nombre debe ir aqui"  required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" placeholder="Escribe tu correo aqui" title="Tu correo debe ir aqui" required ><br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"
+        pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,12}$"
+        title="Debe tener entre 8 y 12 caracteres, al menos una mayúscula, un número y un símbolo."
+        required placeholder="Escribe tu contraseña"><br><br>
+
+        <label for="Genero">Genero</label>
+        <label for="masculino">M</label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="femenimo">F</label>
+        <input type="radio" id="femenino" name="genero" value="femenino"><br><br>
+
+    
+        <label>Intereses:</label><br>
+        <input type="checkbox" name="intereses" value="musica"> Música<br>
+        <input type="checkbox" name="intereses" value="deporte"> Deporte<br>
+        <input type="checkbox" name="intereses" value="lectura"> Lectura<br>
+        <input type="checkbox" name="intereses" value="viajes"> Viajes<br><br>
+
+        <label for="pais">País:</label>
+        <select name="pais" id="pais" required>
+        <option value="">Seleccione un país</option>
+        <option value="argentina">Argentina</option>
+        <option value="brasil">Brasil</option>
+        <option value="chile">Chile</option>
+        <option value="colombia">Colombia</option>
+        <option value="ecuador">Ecuador</option>
+        <option value="españa">España</option>
+        <option value="mexico">México</option>
+        <option value="peru">Perú</option>
+        <option value="uruguay">Uruguay</option>
+        <option value="venezuela">Venezuela</option>
+        </select><br><br>
+
+        <label for="comentario">Comentario</label><br><br>
+        <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escriba aqui su comentario" title="aqui va su comentario" minlength="50" required> </textarea> <br><br>
+
+
+        <button type="submit">Enviar</button>
+
+ 
+
+    </form>
+
+    
+    
+</body>
+</html>
